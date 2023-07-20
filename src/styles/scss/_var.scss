@@ -1,0 +1,10 @@
+$lightText: #E4E5EA;
+$darkGray: #656566;
+$backgroundBlack: #0E1014;
+
+@mixin interFont{
+   font-family: 'Inter', sans-serif;
+}
+@mixin monserratFont{
+   font-family: 'Montserrat', sans-serif;
+}

@@ -1,0 +1,174 @@
+main{
+   margin-top: 100px;
+
+   .content{
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      
+      &__left{
+         display: flex;
+         flex-direction: column;
+         gap: 30px;
+         color: $lightText;
+         max-width: 400px;
+
+         & > .title{
+            font-size: 48px;
+            
+            & > h3{
+               @include interFont;
+               font-weight: 400;
+            }
+            
+            & > p{
+               @include interFont;
+               font-weight: 900;
+            }
+
+            @media (max-width: 414px) {
+               font-size: 36px;
+            }
+            @media (max-width: 320px) {
+               font-size: 32px;
+            }
+         }
+
+         .subtitle{
+            @include monserratFont;
+            font-weight: 400;
+            font-size: 18px;
+            letter-spacing: 1px;
+         }
+
+      }
+
+      &__right{
+         display: flex;
+         flex-direction: column;
+         gap: 60px;
+         color: $lightText;
+         max-width: 320px;
+         text-align: end;
+
+         & > p{
+            @include interFont;
+            letter-spacing: 2px;
+            font-size: 18px;
+            font-weight: 500;
+            
+            & > span{
+               text-transform: uppercase;
+               font-weight: 700;
+            }
+
+            @media (max-width: 320px) {
+               font-size: 16px;
+            }
+         }
+
+         .grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            row-gap: 30px;
+
+            &-element{
+               display: flex;
+               flex-direction: column;
+               gap: 10px;
+
+               & > h4{
+                  @include interFont;
+                  font-weight: 500;
+                  letter-spacing: 2px;
+                  font-size: 18px;
+                  text-transform: uppercase;
+               }
+
+               & > p{
+                  @include monserratFont;
+                  font-size: 16px;
+                  font-weight: 400;
+               }
+
+               @media (max-width: 414px) {
+                  display: none;
+               }
+            }
+         }
+         
+         .get{
+            cursor: pointer;
+            background-color: #4077F3;
+            border: 1px solid #4077F3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin-top: 20px;
+
+            & > span{
+               @include interFont;
+               font-weight: 500;
+               font-size: 16px;
+               color: $lightText;
+            }
+
+            @media (max-width: 414px) {
+               display: none;
+            }
+         }
+
+         .grid-mobile{
+            display: none;
+
+            @media (max-width: 414px) {
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+
+               & > p{
+                  @include monserratFont;
+                  font-size: 13px;
+                  font-weight: 400;
+                  letter-spacing: 2px;
+                  text-transform: uppercase;
+
+                  &::before{
+                     content: '';
+                     display: inline-block;
+                     width: 10px;
+                     height: 1px;
+                     background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+                     border: 1px solid;
+                     border-image-source: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+                     margin-right: 10px;
+                     margin-bottom: 5px;
+                  }
+               }
+            }
+         }
+
+         @media (max-width: 740px) {
+            text-align: start;
+            gap: 10px;
+         }
+         @media (max-width: 414px) {
+            max-width: 100%;
+         }
+      }
+
+      @media (max-width: 740px) {
+         flex-direction: column;
+         gap: 40px;
+      }
+      @media (max-width: 414px) {
+         gap: 40px;
+      }
+   }
+
+   @media (max-width: 414px) {
+      background: rgba($backgroundBlack, 0.2);
+   }
+}

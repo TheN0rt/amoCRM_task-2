@@ -1,0 +1,129 @@
+footer{
+   margin-top: 150px;
+   z-index: 10000;
+
+   .content{
+      display: flex;
+      flex-direction: column;
+      color: $lightText;
+      gap: 40px;
+
+      .flex{
+         display: flex;
+         align-items: flex-start;
+         justify-content: space-between;
+
+         &-element{
+            @include interFont;
+            color: $darkGray;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+
+            & > p{
+               margin-bottom: 20px;
+            }
+
+            li{
+               margin-top: 7px;
+
+               & > a{
+                  @include interFont;
+                  color: $lightText;
+                  font-weight: 400;
+                  font-size: 16px;
+                  letter-spacing: normal;
+                  text-transform: none;
+
+                  @media (max-width: 414px) {
+                     font-size: 14px;
+                  }
+               }
+            }
+
+            span{
+               @include interFont;
+               color: $lightText;
+               font-size: 16px;
+               font-weight: 500;
+            }
+
+            .social{
+               align-self: flex-end;
+               margin: 20px 0 20px;
+               
+               & > img{
+                  margin-left: 10px;
+
+                  @media (max-width: 540px) {
+                     margin-left: 0;
+                     margin-right: 10px;
+                  }
+               }
+
+               @media (max-width: 540px) {
+                  align-self: flex-start;
+               }
+            }
+
+            .address{
+               margin-top: 20px;
+               font-weight: 400;
+               text-transform: none;
+
+               @media (max-width: 414px) {
+                  font-size: 14px;
+               }
+            }
+
+            &:last-child{
+               text-align: end;
+
+               @media (max-width: 540px) {
+                  text-align: start;
+               }
+            }
+         }
+
+         .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+         }
+
+         @media (max-width: 540px) {
+            flex-direction: column;
+            gap: 40px;
+         }
+      }
+
+      .confedentials{
+         align-self: flex-end;
+         text-align: end;
+         cursor: pointer;
+
+         & > p{
+            @include monserratFont;
+            font-weight: 400;
+            font-size: 12px;
+
+            &:last-child{
+               text-decoration: underline;
+
+               & > a{
+                  color: $lightText;
+               }
+            }
+         }
+
+         @media (max-width: 540px) {
+            text-align: start;
+            align-self: flex-start;
+         }
+      }
+   }
+
+   @media (max-width: 414px) {
+      margin-top: 80px;
+   }
+}
