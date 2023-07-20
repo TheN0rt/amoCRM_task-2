@@ -199,7 +199,6 @@ main .content__right .grid-mobile {
     font-family: "Montserrat", sans-serif;
     font-size: 13px;
     font-weight: 400;
-    letter-spacing: 2px;
     text-transform: uppercase;
   }
   main .content__right .grid-mobile > p::before {
